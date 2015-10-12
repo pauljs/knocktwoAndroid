@@ -18,5 +18,9 @@
         android:id="@+id/listView"
         android:layout_below="@+id/textView2"
         android:layout_alignParentRight="true"
+        android:background="@drawable/listview_border"
+        android:divider="@drawable/listview_border"
+        android:layout_marginTop="10dp"
+        android:dividerHeight="1px"
         android:layout_alignParentEnd="true" />
 </RelativeLayout>
