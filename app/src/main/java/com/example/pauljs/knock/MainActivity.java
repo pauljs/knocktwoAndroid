@@ -1,5 +1,7 @@
 package com.example.pauljs.knock;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -21,6 +23,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -36,6 +39,9 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final Questions questions = getJSONList("sample_question.json");
+
+        // Set Alarm Notification daily
+        setAlarm();
 
         listView = (ListView) findViewById(R.id.listView);
         list = new ArrayList<String>();
@@ -118,5 +124,20 @@ public class MainActivity extends ActionBarActivity {
             e.printStackTrace();
         }
         return formList;
+    }
+
+    private void setAlarm() {
+        if(!Alarm.isOn()) {
+            Alarm alarm = new Alarm();
+            alarm.save();
+            Calendar calendar = Calendar.getInstance();
+            Log.i("DATE EMERGENCY", calendar.toString());
+            calendar.set(Calendar.HOUR_OF_DAY, 14);
+            calendar.set(Calendar.MINUTE, 55);
+            Intent intent1 = new Intent(MainActivity.this, AlaramReceiver.class);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, intent1, 0);
+            AlarmManager am = (AlarmManager) MainActivity.this.getSystemService(MainActivity.this.ALARM_SERVICE);
+            am.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+        }
     }
 }
