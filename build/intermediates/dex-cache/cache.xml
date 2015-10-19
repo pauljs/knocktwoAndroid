@@ -16,11 +16,25 @@
         <dex dex="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\pre-dexed\debug\classes-ef47e91d773be3e5dee474c084bb300565ccd207.jar" />
     </item>
     <item
+        jar="C:\Users\pauljs\.gradle\caches\modules-2\files-2.1\com.michaelpardo\activeandroid\3.1.0-SNAPSHOT\4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08\activeandroid-3.1.0-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08">
+        <dex dex="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\pre-dexed\debug\activeandroid-3.1.0-SNAPSHOT-8d051788bf33dae00b306499e5ccb55f6f22826c.jar" />
+    </item>
+    <item
         jar="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
         <dex dex="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\pre-dexed\debug\classes-ed911e11352e7454329ad1940f44a4889889e98d.jar" />
+    </item>
+    <item
+        jar="C:\Users\pauljs\.gradle\caches\modules-2\files-2.1\com.github.PhilJay\MPAndroidChart\v2.1.5\34b9f39e5343d39e205fb7617e734601dc4868e7\MPAndroidChart-v2.1.5.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="34b9f39e5343d39e205fb7617e734601dc4868e7">
+        <dex dex="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\pre-dexed\debug\MPAndroidChart-v2.1.5-387fa6171abe1cd82e82dae4f20ca684a8e4d490.jar" />
     </item>
     <item
         jar="C:\Users\pauljs\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"

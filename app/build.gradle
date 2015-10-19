@@ -20,6 +20,8 @@ android {
     repositories {
         //Added for project
         maven { url "https://jitpack.io" }
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
 }
 
@@ -28,4 +30,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
     //Added for project
     compile 'com.github.PhilJay:MPAndroidChart:v2.1.5'
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
 }

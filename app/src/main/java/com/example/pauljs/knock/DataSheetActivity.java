@@ -21,6 +21,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 /**
@@ -33,6 +34,7 @@ public class DataSheetActivity extends Activity {
     private TextView questionTV;
     private Button nextBtn;
     private EditText responseET;
+    private int actualAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +60,14 @@ public class DataSheetActivity extends Activity {
         switch(currentQuestionId) {
             case 1: {
                 if(isAllDigits(response)) {
-                    questionTV.setText("I received your response as\n" + response + "\nPlease confirm if this is correct by answering Yes or No.");
-                    responseET.setInputType(InputType.TYPE_CLASS_TEXT);
+                    if(Integer.parseInt(response) <= 24 && 0 <= Integer.parseInt(response)) {
+                        actualAnswer = Integer.parseInt(response);
+                        questionTV.setText("I received your response as\n" + response + "\nPlease confirm if this is correct by answering Yes or No.");
+                        responseET.setInputType(InputType.TYPE_CLASS_TEXT);
+                    } else {
+                        Toast.makeText(this, "Response must be between 0 and 24 hours of sleep. Please try again.", Toast.LENGTH_LONG).show();
+                        currentQuestionId -= 1;
+                    }
                 } else {
                     questionTV.setText("Sorry, your response was not in the correct format. I received:\n" + response + "\nbut expected a whole number. Please answer the following question in whole numbers.\nHow many total hours of sleep did you get last night? (e.g. 8)");
                     currentQuestionId -= 1;
@@ -70,6 +78,8 @@ public class DataSheetActivity extends Activity {
                 if(isAllLetters(response)) {
                     response = response.toLowerCase();
                     if(response.equals("yes")) {
+                        Date date = new Date();
+                        saveDate();
                         Toast.makeText(DataSheetActivity.this, "Task complete!", Toast.LENGTH_LONG).show();
                         finish();
                     } else if(response.equals("no")) {
@@ -119,5 +129,18 @@ public class DataSheetActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void saveDate() {
+        Date date = new Date();
+        if(Hour.getByDay(date) == null) {
+            Hour hour = new Hour(actualAnswer, date);
+            hour.save();
+        } else {
+            Hour hour = Hour.getByDay(date);
+            hour.number = actualAnswer;
+            hour.save();
+        }
+
     }
 }

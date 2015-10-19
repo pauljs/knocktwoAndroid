@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -29,6 +30,7 @@ public class MainActivity extends ActionBarActivity {
     private ArrayList<String> list;
     private ListView listView;
     private ListAdapter adapter;
+    private Button view_results_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +48,14 @@ public class MainActivity extends ActionBarActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this, DataSheetActivity.class);
                 intent.putExtra("questions", questions);
+                startActivity(intent);
+            }
+        });
+        view_results_button = (Button) findViewById(R.id.view_results_button);
+        view_results_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CombinedChartActivity.class);
                 startActivity(intent);
             }
         });
