@@ -16,7 +16,7 @@ import java.util.List;
 public abstract class DemoBase extends FragmentActivity {
 
     protected static String[] mMonths = new String[] {
-            "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"
+            "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
     };
 
     public static String getMonthName(int num) {
@@ -28,7 +28,7 @@ public abstract class DemoBase extends FragmentActivity {
         String[] labels = new String[hours.size()];
         for(int i = 0; i < hours.size(); i++) {
             Date date = hours.get(i).date;
-            String strDate = getMonthName(date.getMonth()) + " " + date.getDay();
+            String strDate = getMonthName(date.getMonth()) + "  " + date.getDay();
             labels[i] = strDate;
         }
         return labels;
