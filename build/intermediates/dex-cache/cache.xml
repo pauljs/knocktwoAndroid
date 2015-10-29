@@ -9,11 +9,11 @@
         <dex dex="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-84444af743c7bc2820100b6034a6d8a980df8e3f.jar" />
     </item>
     <item
-        jar="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jar="C:\Users\pauljs\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.2-SNAPSHOT\1d7d1c0aa0ba77187d775884f5d88b87289a08ca\bolts-android-1.2.2-SNAPSHOT.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\pre-dexed\debug\classes-ef47e91d773be3e5dee474c084bb300565ccd207.jar" />
+        sha1="1d7d1c0aa0ba77187d775884f5d88b87289a08ca">
+        <dex dex="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.2-SNAPSHOT-344cf4d6a3eb1a88d6abf974780cf88bbd920fc1.jar" />
     </item>
     <item
         jar="C:\Users\pauljs\.gradle\caches\modules-2\files-2.1\com.michaelpardo\activeandroid\3.1.0-SNAPSHOT\4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08\activeandroid-3.1.0-SNAPSHOT.jar"
@@ -21,13 +21,6 @@
         revision="21.1.2"
         sha1="4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08">
         <dex dex="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\pre-dexed\debug\activeandroid-3.1.0-SNAPSHOT-8d051788bf33dae00b306499e5ccb55f6f22826c.jar" />
-    </item>
-    <item
-        jar="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\pre-dexed\debug\classes-ed911e11352e7454329ad1940f44a4889889e98d.jar" />
     </item>
     <item
         jar="C:\Users\pauljs\.gradle\caches\modules-2\files-2.1\com.github.PhilJay\MPAndroidChart\v2.1.5\34b9f39e5343d39e205fb7617e734601dc4868e7\MPAndroidChart-v2.1.5.jar"
@@ -42,6 +35,41 @@
         revision="21.1.2"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
         <dex dex="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-70728699af3c3b846c6151ed94b197aad44cbac8.jar" />
+    </item>
+    <item
+        jar="C:\Users\pauljs\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.2.2-SNAPSHOT\65f6f72eb46702ee7c9051fa005747686c20a9e\bolts-tasks-1.2.2-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="065f6f72eb46702ee7c9051fa005747686c20a9e">
+        <dex dex="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.2.2-SNAPSHOT-dce61b5a114db7774413a6a6ab9fdd9594e1dd84.jar" />
+    </item>
+    <item
+        jar="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\pre-dexed\debug\classes-ef47e91d773be3e5dee474c084bb300565ccd207.jar" />
+    </item>
+    <item
+        jar="C:\Users\pauljs\.gradle\caches\modules-2\files-2.1\com.parse\parse-android\1.10.4-SNAPSHOT\e7cf6ebaa038b11d216b892b3d6b0fdf7802ca6\parse-android-1.10.4-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0e7cf6ebaa038b11d216b892b3d6b0fdf7802ca6">
+        <dex dex="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\pre-dexed\debug\parse-android-1.10.4-SNAPSHOT-b8fcf798cfeb49fd9fccf46377c5e7c6fe2e1fe5.jar" />
+    </item>
+    <item
+        jar="C:\Users\pauljs\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.2.2-SNAPSHOT\82dd3c727f4c06005a4807f0b26d03cb4a4e22a6\bolts-applinks-1.2.2-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="82dd3c727f4c06005a4807f0b26d03cb4a4e22a6">
+        <dex dex="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\pre-dexed\debug\bolts-applinks-1.2.2-SNAPSHOT-dafdbed014d3ce187bfdf7667521cbaf9b9c2454.jar" />
+    </item>
+    <item
+        jar="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\pauljs\AndroidStudioProjects\Knock\app\build\intermediates\pre-dexed\debug\classes-ed911e11352e7454329ad1940f44a4889889e98d.jar" />
     </item>
 
 </items>
