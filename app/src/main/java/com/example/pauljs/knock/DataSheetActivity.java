@@ -62,7 +62,7 @@ public class DataSheetActivity extends Activity {
                 if(isAllDigits(response)) {
                     if(Integer.parseInt(response) <= 24 && 0 <= Integer.parseInt(response)) {
                         actualAnswer = Integer.parseInt(response);
-                        questionTV.setText("I received your response as\n" + response + "\nPlease confirm if this is correct by answering Yes or No.");
+                        questionTV.setText("I received your response as\n" + response + "\nPlease confirm if this is correct by answering Y or N for yes and no respectively.");
                         responseET.setInputType(InputType.TYPE_CLASS_TEXT);
                     } else {
                         Toast.makeText(this, "Response must be between 0 and 24 hours of sleep. Please try again.", Toast.LENGTH_LONG).show();
@@ -77,17 +77,17 @@ public class DataSheetActivity extends Activity {
             case 2: {
                 if(isAllLetters(response)) {
                     response = response.toLowerCase();
-                    if(response.equals("yes")) {
+                    if(response.equals("y")) {
                         Date date = new Date();
                         saveDate();
                         Toast.makeText(DataSheetActivity.this, "Task complete!", Toast.LENGTH_LONG).show();
                         finish();
-                    } else if(response.equals("no")) {
+                    } else if(response.equals("n")) {
                         questionTV.setText("Please resend your response to the following question in whole numbers.\nHow many total hours of sleep did you get last night? (e.g. 8)");
                         responseET.setInputType(InputType.TYPE_CLASS_NUMBER);
                         currentQuestionId -= 2;
                     } else {
-                        questionTV.setText("Sorry, your response was not in the correct format. I received:\n" + response + "\nbut expected Yes or No. Please state Yes or No.");
+                        questionTV.setText("Sorry, your response was not in the correct format. I received:\n" + response + "\nbut expected Y or N. Please state Y or N for yes or no respectively.");
                         currentQuestionId -= 1;
                     }
                 } else {
@@ -132,15 +132,15 @@ public class DataSheetActivity extends Activity {
     }
 
     private void saveDate() {
-        Date date = new Date();
-        if(Hour.getByDay(date) == null) {
+        Date date = new Date(System.currentTimeMillis());
+//        if(Hour.getByDay(date) == null) {
             Hour hour = new Hour(actualAnswer, date);
             hour.save();
-        } else {
-            Hour hour = Hour.getByDay(date);
-            hour.number = actualAnswer;
-            hour.save();
-        }
+//        } else {
+//            Hour hour = Hour.getByDay(date);
+//            hour.number = actualAnswer;
+//            hour.save();
+//        }
 
     }
 }

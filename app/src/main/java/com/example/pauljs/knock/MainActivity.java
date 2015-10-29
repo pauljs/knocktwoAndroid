@@ -28,6 +28,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -38,6 +39,7 @@ public class MainActivity extends ActionBarActivity {
     private ListView listView;
     private ListAdapter adapter;
     private Button view_results_button;
+    private Button final_info_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -72,6 +74,23 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(intent);
             }
         });
+        final_info_button = (Button) findViewById(R.id.button2);
+        final_info_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Final_Info.class);
+                startActivity(intent);
+            }
+        });
+        Date date = new Date();
+        Log.i("Date 1", new Date().toString());
+        Log.i("Date 2", new Date(2015 - 1900,1,1).toString());
+        Log.i("Compare", date.before(new Date(2015 - 1900,1,1)) + "");
+        if(date.after(new Date(2015 - 1900,9,1))) {
+            final_info_button.setVisibility(View.VISIBLE);
+        } else {
+            final_info_button.setVisibility(View.INVISIBLE);
+        }
     }
 
 

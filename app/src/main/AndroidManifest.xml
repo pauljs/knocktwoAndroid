@@ -46,6 +46,10 @@
             android:name=".CombinedChartActivity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name=".Final_Info"
+            android:label="@string/app_name" >
+        </activity>
 
 
         <service android:name="com.parse.PushService" />

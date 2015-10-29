@@ -34,6 +34,10 @@ public class Hour extends Model {
         this.day = date.getDay();
     }
 
+    public String getFormattedString() {
+        return "Date: " + date.toString() + "\nHours of Sleep: " + number;
+    }
+
     public static Hour getByDay(Date date) {
         return new Select()
                 .from(Hour.class)

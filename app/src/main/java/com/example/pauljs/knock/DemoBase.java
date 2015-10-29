@@ -35,7 +35,16 @@ public abstract class DemoBase extends FragmentActivity {
     }
 
     public static List<Hour> getSortedHours() {
-        return Hour.getSortedHours();
+        List<Hour> hours = Hour.getSortedHours();
+        for(int i = 1; i < hours.size(); i++) {
+            Date prev_date = hours.get(i - 1).date;
+            Date cur_date = hours.get(i).date;
+            if(prev_date.getDay() == cur_date.getDay() && prev_date.getMonth() == cur_date.getMonth() && prev_date.getYear() == cur_date.getYear()) {
+                hours.remove(i - 1);
+                i--;
+            }
+        }
+        return hours;
     }
 
     public static List<Float> getAverageHours() {

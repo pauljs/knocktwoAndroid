@@ -31,4 +31,12 @@
         android:id="@+id/view_results_button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Final Info"
+        android:id="@+id/button2"
+        android:layout_above="@+id/view_results_button"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
